@@ -1,0 +1,212 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 60px;
+
+}
+
+.container {
+  flex: 1;
+}
+
+.navbar {
+  height: 5rem;
+  background-color: white;
+}
+
+.fa-compass {
+  color: #fe424d;
+  font-size: 2rem;
+  transition: transform 0.6s ease-in-out;
+}
+
+.fa-compass:hover {
+  transform: rotate(360deg);
+}
+
+
+.nav-link {
+  /* for overriding the style we are using the important */
+  color: #222222 !important;
+}
+
+
+/* footer */
+
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ebedeb;
+  color: #222;
+  text-align: center;
+  padding: 3px 0;
+  /* controls height */
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+  /* responsive text */
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.f-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  /* spacing between icons and text */
+  max-width: 100%;
+}
+
+.f-info-socials i {
+  font-size: 1rem;
+}
+
+.f-info-socials a {
+  color: #000;
+  margin: 0 4px;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  /* responsive icon size */
+  transition: color 0.3s ease;
+}
+
+.f-info-socials a:hover {
+  color: #0077b5;
+}
+
+.f-info-brand {
+  white-space: nowrap;
+  /* prevents text wrapping */
+
+}
+
+body {
+  margin: 0;
+  padding-bottom: 40px;
+  /* prevents content from hiding behind footer */
+  font-family: Arial, sans-serif;
+}
+
+/*Responsive adjustments for very small screens */
+@media (max-width: 480px) {
+  .fixed-footer {
+    padding: 4px 0;
+  }
+
+  .f-info-socials a {
+    margin: 0 3px;
+  }
+
+  .f-info-brand {
+    font-size: 0.75rem;
+  }
+}
+
+
+.show-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.listing-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: hwb(0 100% 0%);
+}
+
+.listing-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+
+}
+
+.card-body {
+  padding: 1rem 1.2rem;
+}
+
+.card-body h5 {
+  font-size: 1.05rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.btn-danger {
+  background-color: #e63946;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #d62828;
+}
+
+.btn-dark {
+  background-color: #000;
+  border: none;
+}
+
+.btn-dark:hover {
+  background-color: #333;
+}
+
+/* FOR CARDS */
+.listing-card .card img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-style: preserve-3d;
+}
+
+.listing-card .card:hover img {
+  transform: perspective(1200px) translateZ(55px) scale(1.06);
+}
+
+.listing-card {
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+  background-color: #f3f5f7;
+}
+
+.listing-card:hover {
+  transform: perspective(1100px) translateZ(40px) scale(1);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+.listing-card img {
+  transform: none !important;
+  transition: inherit;
+}
+
+.custom-round {
+  border-radius: 6px;
+}
+
+/* Responsive Image Wrapper */
+.responsive-img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  aspect-ratio: 16 / 9;
+  /* Maintains aspect ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.responsive-img-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Hover effect stays intact */
+.listing-card:hover .responsive-img-wrapper img {
+  transform: perspective(1200px) translateZ(55px) scale(1.06);
+}
